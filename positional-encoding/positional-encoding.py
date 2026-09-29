@@ -9,7 +9,7 @@ def positional_encoding(seq_len: int, d_model: int, base: float = 10000.0) -> np
     dims_even = np.arange(0, d_model, 2) 
     dims_odd = np.arange(1, d_model, 2) 
 
-    answer  = np.zeros((seq_len, d_model), dtype = float)
+    answer  = np.zeros((seq_len, d_model), dtype = np.float32)
     answer[:, dims_even] = np.sin(positions/ (base ** (dims_even/d_model)))
     answer[:, dims_odd] = np.cos(positions/ (base ** ((dims_odd-1)/d_model)))
 
