@@ -7,4 +7,4 @@ def expected_value_discrete(x: list, p: list) -> float:
     x = np.asarray(x, dtype= float)
     p = np.asarray(p, dtype=float)
     # Write code here
-    return np.mean(x@p)
+    return x@p
